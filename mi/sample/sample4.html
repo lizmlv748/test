@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイムライン形式</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fff;
+      padding: 30px;
+    }
+    .timeline {
+      border-left: 4px solid #f48fb1;
+      padding-left: 20px;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .event {
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: #f48fb1;
+      border-radius: 50%;
+    }
+    .event img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .date {
+      font-weight: bold;
+      color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+  <h1>タイムライン形式</h1>
+  <div class="timeline">
+    <div class="event">
+      <div class="date">2023.01.01</div>
+      <p>初詣デート</p>
+      <img src="sampleimages/image1.jpg" alt="初詣">
+    </div>
+    <div class="event">
+      <div class="date">2023.03.14</div>
+      <p>ホワイトデーの思い出</p>
+      <img src="sampleimages/image2.jpg" alt="ホワイトデー">
+    </div>
+    <div class="event">
+      <div class="date">2023.07.07</div>
+      <p>七夕に花火大会</p>
+      <img src="sampleimages/image3.jpg" alt="七夕花火">
+    </div>
+    <div class="event">
+      <div class="date">2023.12.24</div>
+      <p>クリスマスの夜</p>
+      <img src="sampleimages/image4.jpg" alt="クリスマス">
+    </div>
+  </div>
+</body>
+</html>

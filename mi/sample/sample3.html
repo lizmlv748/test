@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>モーダル形式</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fefefe;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .gallery img:hover {
+      opacity: 0.8;
+    }
+
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    #modal img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <h1>モーダル形式</h1>
+  <div class="gallery">
+    <img src="sampleimages/image1.jpg" alt="画像1" onclick="openModal(this.src)">
+    <img src="sampleimages/image2.jpg" alt="画像2" onclick="openModal(this.src)">
+    <img src="sampleimages/image3.jpg" alt="画像3" onclick="openModal(this.src)">
+    <img src="sampleimages/image4.jpg" alt="画像4" onclick="openModal(this.src)">
+  </div>
+
+  <div id="modal" onclick="this.style.display='none'">
+    <img id="modal-img" src="">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("modal-img").src = src;
+      document.getElementById("modal").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
